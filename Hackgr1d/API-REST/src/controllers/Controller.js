@@ -25,6 +25,9 @@ module.exports = {
         console.log("=================");
         console.log("Fetching data ...");
         console.log("=================");
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
 
         var payload = {
             "Datasets": "basic_data,processes,phones,addresses,emails,occupation_data,financial_data",
@@ -46,6 +49,9 @@ module.exports = {
         console.log("=================");
         console.log("Fetching data ...");
         console.log("=================");
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
 
 
         user = await axios.get("http://localhost:3001/api/profile/" + req.params.cpf);
@@ -88,6 +94,10 @@ module.exports = {
         console.log("=================");
         console.log("Fetching data ...");
         console.log("=================");
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+
 
         url_model = "https://automl.googleapis.com/v1beta1/projects/207747143483/locations/us-central1/models/TBL6774706865239490560:predict"
 
